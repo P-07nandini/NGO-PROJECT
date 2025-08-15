@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NGO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff; /* soft blue background */
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3498db;
+      color: white;
+      padding: 20px 0;
+    }
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: #2c3e50;
+    }
+
+    form {
+      background-color: #ffffff;
+      width: 400px;
+      padding: 30px 20px;
+      border-radius: 10px;
+      margin: 30px auto;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      background-color: #f9f9f9;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .gender {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .gender label {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .is-robot {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 12px;
+      background: #f3f3f3;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .is-robot label {
+      font-size: 14px;
+    }
+
+    button {
+      background-color: blueviolet;
+      color: #fff;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #8a2be2;
+    }
+
+    @media (max-width: 500px) {
+      form {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Registration Form</h3>
+
+  <form>
+    <div>
+      <label for="firstname">First Name:</label>
+      <input name="firstname" type="text" required />
+    </div>
+
+    <div>
+      <label for="lastname">Last Name:</label>
+      <input name="lastname" type="text" required />
+    </div>
+
+    <div>
+      <label for="email">Email Address:</label>
+      <input name="useremail" type="email" required />
+    </div>
+
+    <div>
+      <label>Gender:</label>
+      <div class="gender">
+        <label><input required type="radio" name="gender" value="male"> Male</label>
+        <label><input required type="radio" name="gender" value="female"> Female</label>
+        <label><input required type="radio" name="gender" value="other"> Other</label>
+      </div>
+    </div>
+
+    <div>
+      <label for="Address">Address:</label>
+      <textarea name="Address" rows="4" required></textarea>
+    </div>
+
+    <div>
+      <label for="Occupation">Occupation:</label>
+      <input name="Occupationx" type="text" required />
+    </div>
+
+    <div>
+      <label for="country">Country:</label>
+      <select name="country" id="country">
+        <option value="india">India</option>
+        <option value="japan">Japan</option>
+        <option value="russia">Russia</option>
+      </select>
+    </div>
+
+    <div class="is-robot">
+      <label><input type="checkbox" required name="isRobot"> I am not a robot</label>
+    </div>
+
+    <button type="submit">SUBMIT</button>
+  </form>
+</body>
+</html>
